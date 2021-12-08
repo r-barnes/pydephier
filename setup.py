@@ -4,6 +4,7 @@ import re
 import subprocess
 from typing import List
 
+
 # Available at setup time due to pyproject.toml
 from pybind11.setup_helpers import Pybind11Extension
 
@@ -47,6 +48,7 @@ ext_modules: List[Pybind11Extension] = [
       ('_USE_MATH_DEFINES',      None) #To ensure that `#include <cmath>` imports `M_PI` in MSVC
     ],
     extra_compile_args = [
+      '-std=c++17',
       '-Wno-unknown-pragmas'
     ]
   )
