@@ -1,3 +1,5 @@
 pydephier.egg-info/
 build/
 dist/
+.DS_Store
+__pycache__/
